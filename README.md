@@ -1,6 +1,6 @@
-# tibia-oce Platforming
+# Mythbound Platforming
 
-This repository holds the platform foundations for both Google Cloud Platform and GitHub.
+This repository holds the platform foundations for both Google Cloud Platform and the GitHub Organisation.
 
 It defines:
 
@@ -40,16 +40,6 @@ Before running any Terraform in this repository you need:
 - an owner in the GitHub organisation
 
 The initial bootstrap also requires a personal access token or GitHub App token with rights to manage organisation settings, repositories and teams.
-
-## Getting Started
-
-Follow the [setup instructions](https://tibia-oce.github.io/foundations/setup) for installation and environment configuration.
-
-Quick start:
-
-```bash
-make help
-```
 
 ## Documentation
 
