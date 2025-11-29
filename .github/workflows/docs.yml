@@ -1,0 +1,70 @@
+name: docs
+
+on:
+  push:
+  workflow_dispatch:
+  pull_request:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  mkdocs:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Configure pip cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('.github/mkdocs.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install MkDocs
+        run: pip install mkdocs mkdocs-material
+
+      - name: Build site
+        run: mkdocs build -f .github/mkdocs.yml --strict
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          token: ${{ github.token }}
+          enablement: true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .github/site
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  # terraform:
+  #   name: terraform-docs README generation
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout source code
+  #       uses: actions/checkout@v6
+  #       with:
+  #         ref: ${{ github.event.pull_request.head.ref }}
+  #     - name: Render terraform docs and push changes
+  #       uses: terraform-docs/gh-actions@v1.4.1
+  #       with:
+  #         config-file: .terraform-docs.yaml
+  #         git-push: "true"
