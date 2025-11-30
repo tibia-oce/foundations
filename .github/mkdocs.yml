@@ -62,7 +62,6 @@ plugins:
   - typeset
 
 markdown_extensions:
-  # Core Markdown extras
   - abbr
   - attr_list
   - footnotes
@@ -70,6 +69,9 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.betterem
   - pymdownx.caret
   - pymdownx.highlight:
@@ -78,21 +80,6 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
-  - pymdownx.blocks.admonition:
-      types:
-        - note
-        - attention
-        - caution
-        - danger
-        - error
-        - tip
-        - hint
-        - warning
-        - info
-        - check
-  - pymdownx.blocks.details
-  - pymdownx.blocks.tab:
-      alternate_style: true
 
 extra:
   social:
