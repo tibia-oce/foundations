@@ -37,8 +37,8 @@ Those concerns live in separate application or infrastructure repositories that 
 
 Make sure you have the following installed:
 
-- [Git](https://git-scm.com/downloads) – Version control system
-- [Make](https://www.gnu.org/software/make/#download) – Build automation tool
+- [Git](https://git-scm.com/downloads) - Version control system
+- [Make](https://www.gnu.org/software/make/#download) - Build automation tool
 
 Before running any Terraform in this repository you need:
 

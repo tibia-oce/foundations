@@ -62,24 +62,24 @@ If you are only changing application code and not touching infrastructure, you r
 
 - [Overview](index.md)
 
-  High level summary of platform responsibilities and how they are split between GCP and GitHub.
+      High level summary of platform responsibilities and how they are split between GCP and GitHub.
 
 - [Platforming](platforming.md)
 
-  Detailed view of platform responsibilities, repository layout and the separation between platform and application concerns.
+      Detailed view of platform responsibilities, repository layout and the separation between platform and application concerns.
 
 - [Google Cloud](gcp.md)
 
-  GCP organisation and project structure, Terraform roots, state backend layout, service accounts and environment projects.
+      GCP organisation and project structure, Terraform roots, state backend layout, service accounts and environment projects.
 
 - [GitHub Organisation](github.md)
 
-  GitHub organisation settings, core repositories, team structure and branch protection rules.
+      GitHub organisation settings, core repositories, team structure and branch protection rules.
 
 - [Continuous Integration](ci.md)
 
-  CI patterns for Terraform and Ansible, use of GitHub Actions, Workload Identity Federation and how plans and applies are run per environment.
+      CI patterns for Terraform and Ansible, use of GitHub Actions, Workload Identity Federation and how plans and applies are run per environment.
 
 - [Secrets and state management](state.md)
 
-  Terraform state layout in GCS, use of Secret Manager, integration points with CI and Ansible, and rules for how secrets are handled across the platform.
+      Terraform state layout in GCS, use of Secret Manager, integration points with CI and Ansible, and rules for how secrets are handled across the platform.
