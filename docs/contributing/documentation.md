@@ -25,7 +25,7 @@ foundation/
 The MkDocs configuration is located at `.github/mkdocs.yml`:
 
 ```yaml
-site_name: tibia-oce foundation
+site_name: Mythbound
 site_url: https://tibia-oce.github.io/foundation
 repo_url: https://github.com/tibia-oce/foundation
 edit_uri: edit/master/docs/
