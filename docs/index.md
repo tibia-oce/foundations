@@ -35,26 +35,6 @@ Those concerns live in separate application or infrastructure repositories that 
 
 ## How to use these docs
 
-If you are new to this platform start here.
-
-- Read the [`Golden path`](golden-path.md)
-
-      Understand why this platform exists and what problems it is solving for Mythbound and similar Open Tibia services.
-
-- Read the architecture section
-
-      Get a high level view of how GCP, GitHub, Terraform, Ansible and the various repositories fit together.
-
-- Use the runbooks when you make changes
-
-      Follow the step by step guides when bootstrapping the organisation, adding environments or onboarding new repositories.
-
-- Refer to contributing when you change the platform itself
-
-      Platform changes are slower and more controlled than application changes. The contributing guide sets expectations.
-
-## Sections
-
 - [Golden path](golden-path.md)
 
       Rationale for the platform, how it differs from legacy hosting patterns, and the core principles that guide everything else.
