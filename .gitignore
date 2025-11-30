@@ -36,6 +36,9 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+# Backend configuration files (provide per-root and do not commit)
+backend.hcl
+
 # Checkov
 checkov-output
 results.sarif
@@ -53,3 +56,4 @@ temp.sh
 # __pycache__/
 # .tox
 # .coverage
+cloud/

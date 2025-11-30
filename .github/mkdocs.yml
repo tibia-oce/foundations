@@ -93,7 +93,7 @@ nav:
 
   - Architecture:
       - Overview: architecture/index.md
-      - Platforming: architecture/platforming.md
+      - Design: architecture/platforming.md
       - Google Cloud: architecture/gcp.md
       - GitHub Organisation: architecture/github.md
       - Continuous Integration: architecture/ci.md
