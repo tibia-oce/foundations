@@ -1,27 +1,37 @@
 # Mythbound Platforming
 
-This repository holds the platform foundations for both Google Cloud Platform and the GitHub Organisation.
+This repository holds the platform foundations for both Google Cloud Platform and the GitHub organisation.
 
 It defines:
 
 - GCP organisation level layout and environment projects
-- shared Terraform state backend and encryption
+- Shared Terraform state backend and encryption
 - CI service accounts and Workload Identity Federation for GitHub Actions
 - GitHub organisation settings, core repositories, teams and branch protections
 
 Application and service repositories consume these foundations. They do not modify them.
 
+For the full rationale behind these patterns, the pitfalls of the old “bare metal and XAMPP” model, and how application repositories are expected to consume this platform, see the [`Golden path`](https://tibia-oce.github.io/foundations/golden-path) write-up.
+
 ## Scope
 
-This repository is for platform engineers.
+This repository is about platforming only.
 
-It covers:
+It manages:
 
-- GCP foundations under `cloud/`
-- GitHub foundations under `github/`
-- runbooks and design docs under `docs/` for MkDocs
+- GCP organisation level resources
+- environment projects such as dev and prod
+- shared Terraform state storage and encryption
+- CI identities and their permissions
+- GitHub organisation settings, core repositories, teams and branch protections
 
-It does not contain any workload specific infrastructure such as game servers or web stacks. Those live in their own repositories and use the foundations defined here.
+It does not manage:
+
+- individual game or web workloads
+- application specific infrastructure inside environment projects
+- per project CI pipelines beyond what is needed for platform itself
+
+Those concerns live in separate application or infrastructure repositories that consume the foundations defined here.
 
 ## Prerequisites
 
